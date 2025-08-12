@@ -38,18 +38,20 @@
 
     /* Floating Ad */
     .floating-ad {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 50%;
-      background: #ffcc00;
-      color: #000;
-      text-align: center;
-      font-weight: bold;
-      padding: 10px 40px 10px 10px;
-      box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
-      z-index: 9999;
-    }
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: calc(100% - 40px); /* total kosong kiri-kanan 20px + 20px */
+  background: #ffcc00;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 40px 10px 10px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+  z-index: 9999;
+}
+
     .floating-ad a {
       color: inherit;
       text-decoration: none;
@@ -107,6 +109,7 @@ if(showAd){
 }
 
 })();
+
 
 
 
