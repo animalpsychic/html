@@ -55,22 +55,22 @@
       text-decoration: none;
     }
     .close-btn {
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
-      background: #000;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 22px;
-      height: 22px;
-      font-size: 16px;
-      line-height: 20px;
-      text-align: center;
-      cursor: pointer;
-      z-index: 10001;
-    }
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: #000 !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2147483647 !important; /* Paling tinggi */
+}
   `;
 
   var style = document.createElement('style');
@@ -83,16 +83,29 @@
   menu.innerHTML = menuItems.map(item => `<a href="${item.link}">${item.text}</a>`).join('');
   document.body.insertBefore(menu, document.body.firstChild);
 
-  // Floating Ad
-  if(showAd){
-    var ad = document.createElement('div');
-    ad.className = 'floating-ad';
-    ad.innerHTML = `
-      <button class="close-btn" onclick="this.parentElement.remove()">&times;</button>
-      <a href="#" target="_blank">🔥 Promo Spesial! Diskon 50% hari ini!</a>
-    `;
-    document.body.appendChild(ad);
-  }
+// Floating Ad
+if(showAd){
+  var ad = document.createElement('div');
+  ad.className = 'floating-ad';
+
+  var btn = document.createElement('button');
+  btn.className = 'close-btn';
+  btn.innerHTML = '&times;';
+  btn.addEventListener('click', function(){
+    ad.remove();
+  });
+
+  var link = document.createElement('a');
+  link.href = '#';
+  link.target = '_blank';
+  link.textContent = '🔥 Promo Spesial! Diskon 50% hari ini!';
+
+  ad.appendChild(btn);
+  ad.appendChild(link);
+  document.body.appendChild(ad);
+}
+
 })();
+
 
 
