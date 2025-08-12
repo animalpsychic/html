@@ -55,21 +55,22 @@
       text-decoration: none;
     }
     .close-btn {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
+  position: absolute !important;
+  top: 50% !important;
+  right: 10px !important;
+  transform: translateY(-50%) !important;
   background: #000 !important;
   color: #fff !important;
-  border: none;
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  cursor: pointer;
-  z-index: 2147483647 !important; /* Paling tinggi */
+  border: none !important;
+  border-radius: 50% !important;
+  width: 22px !important;
+  height: 22px !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  z-index: 2147483647 !important; /* selalu paling atas */
+  display: inline-block !important;
 }
   `;
 
@@ -106,6 +107,7 @@ if(showAd){
 }
 
 })();
+
 
 
 
