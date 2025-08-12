@@ -101,7 +101,7 @@ if(showAd){
   var link = document.createElement('a');
   link.href = '#';
   link.target = '_blank';
-  link.textContent = '🔥 Promo Spesial! Diskon 50% hari ini!';
+  link.textContent = '🔥 Promo Spesial! Diskon 50%';
 
   ad.appendChild(btn);
   ad.appendChild(link);
@@ -109,6 +109,7 @@ if(showAd){
 }
 
 })();
+
 
 
 
