@@ -1,6 +1,6 @@
 (function(){
   // ======= PENGATURAN =======
-  var showAd = true; // true = tampilkan iklan, false = sembunyikan
+  var showAd = false; // true = tampilkan iklan, false = sembunyikan
   var menuItems = [
     { text: "Home", link: "#" },
     { text: "Produk", link: "#" },
@@ -94,3 +94,4 @@
     document.body.appendChild(ad);
   }
 })();
+
