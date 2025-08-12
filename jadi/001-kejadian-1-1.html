@@ -5,23 +5,37 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Kejadian 1:1</title>
   <meta name="description" content="Catatan renungan & khotbah: Kejadian 1:1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 24px;
-      max-width: 900px;
-      margin: 0 auto;
-      color: #111;
-    }
-    h1 {
-      font-size: 1.7rem;
-      margin-bottom: 8px;
-    }
-    h2 {
-      font-size: 1.2rem;
-      margin-top: 20px;
-    }
+  <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Dark gray text */
+        }
+        .container {
+            max-width: 900px;
+        }
+        h1, h2 {
+            font-weight: 700;
+            color: #212529; /* Darker text */
+        }
+        h1 {
+            border-bottom: 3px solid #007bff; /* Blue accent */
+            padding-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+        h2 {
+            border-bottom: 1px solid #dee2e6; /* Lighter gray border */
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 2rem;
+        }
+        p {
+            line-height: 1.8;
+            margin-top: 1rem;
+            text-align: justify;
+        }
     pre {
       white-space: pre-wrap;
       background: #f9f9f9;
@@ -32,6 +46,15 @@
     a {
       color: blue;
     }
+      /* Mobile-first approach */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
   </style>
 </head>
 <body>
@@ -60,4 +83,5 @@
 
   <script src="/script.js"></script>
 </body>
+
 </html>
