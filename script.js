@@ -41,7 +41,7 @@
       position: fixed;
       left: 0;
       bottom: 0;
-      width: 100%;
+      width: 50%;
       background: #ffcc00;
       color: #000;
       text-align: center;
@@ -107,6 +107,7 @@ if(showAd){
 }
 
 })();
+
 
 
 
